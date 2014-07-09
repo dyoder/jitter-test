@@ -1,0 +1,25 @@
+{
+  "name": "jitter",
+  "version": "0.0.0",
+  "description": "You'll see.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pandastrike/jitter.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pandastrike/jitter/issues"
+  },
+  "homepage": "https://github.com/pandastrike/jitter",
+  "dependencies": {
+    "pirate": "^0.9.7",
+    "fairmont": "^0.7.4",
+    "mutual": "^0.4.12",
+    "key-forge": "^0.1.3"
+  }
+}
