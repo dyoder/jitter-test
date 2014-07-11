@@ -7,17 +7,22 @@ ENV LC_ALL en_US.UTF-8
 # Configure the environment
 ENV PATH ./node_modules/.bin:$PATH
 
-# Install Node.js
-RUN  pacman -Syu --noconfirm --ignore filesystem
-RUN  pacman -S --noconfirm nodejs
-RUN  pacman -S git --noconfirm
-RUN  git clone https://github.com/peterlnguyen/jitter-test.git
-RUN  cd jitter-test
-RUN  npm install
-RUN  npm install coffee-script -g --save
-RUN  pacman -S --noconfirm redis
-RUN  redis-server &
-RUN  coffee server.coffee &
+# install node.js
+RUN pacman -Syu --noconfirm --ignore filesystem
+RUN pacman -S --noconfirm nodejs
+RUN pacman -S git --noconfirm
+
+RUN npm install coffee-script -g --save
+RUN pacman -S --noconfirm redis
+RUN redis-server &
+
+# install test app
+RUN git clone https://github.com/peterlnguyen/jitter-test.git
+RUN cd jitter-test && npm install
+RUN coffee server.coffee &
+
+# expose virtual port to host machine
+EXPOSE 1337
 
 # Install Node.js
 #RUN \
