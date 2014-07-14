@@ -1,9 +1,18 @@
-docker:
-	sudo docker build .
-dockerRemoveContainers:
-	docker rm `docker ps --no-trunc -a -q`
+buildrun:
+	sudo docker build --tag $(name) --rm=true ./ && \
+	sudo docker run -i -p 127.0.0.1:9000:1337 --name $(name) -t $(name):latest /bin/bash
+build:
+	sudo docker build --tag="$(name)" ./
 run:
-	sudo docker run -p 127.0.0.1:9000:1337 --name JITTERBUG #{image_id} -i -t /bin/bash
+	sudo docker run -i -p 127.0.0.1:9000:1337 --name $(name) -t $(name):latest /bin/bash
+
+cleanimages:
+	sudo ./docker_scripts/cleanup/images
+cleancontainers:
+	sudo ./docker_scripts/cleanup/containers
+cleanuntagged:
+	sudo ./docker_scripts/cleanup/untagged
+
 app:
 	npm install && \
 	coffee server.coffee

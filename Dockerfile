@@ -1,3 +1,4 @@
+# https://registry.hub.docker.com/u/base/archlinux/
 FROM base/arch
 
 # Set locale
@@ -7,13 +8,14 @@ ENV LC_ALL en_US.UTF-8
 # Configure the environment
 ENV PATH ./node_modules/.bin:$PATH
 
-# install node.js
+# install required software
 RUN pacman -Syu --noconfirm --ignore filesystem
 RUN pacman -S --noconfirm nodejs
 RUN pacman -S git --noconfirm
 
 RUN npm install coffee-script -g --save
 RUN pacman -S --noconfirm redis
+
 RUN redis-server &
 
 # install test app
