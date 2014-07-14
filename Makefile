@@ -2,12 +2,12 @@
 nocache?=false
 
 build:
-	sudo docker build --no-cache=$(nocache) --tag $(name) --rm=true ./
+	sudo docker build --no-cache=$(nocache) --tag $(iname) --rm=true ./
 run:
-	sudo docker run -i -p 127.0.0.1:9000:1337 --name $(name) -t $(name):latest /bin/bash
+	sudo docker run -i -p 127.0.0.1:9000:1337 --name $(cname) -t $(iname):latest /bin/bash
 buildrun:
-	sudo docker build --no-cache=$(nocache) --tag $(name) --rm=true ./ && \
-	sudo docker run -i -p 127.0.0.1:9000:1337 --name $(name) -t $(name):latest /bin/bash
+	sudo docker build --no-cache=$(nocache) --tag $(iname) --rm=true ./ && \
+	sudo docker run -i -p 127.0.0.1:9000:1337 --name $(cname) -t $(iname):latest /bin/bash
 
 # http://sosedoff.com/2013/12/17/cleanup-docker-containers-and-images.html
 cleanimages:
