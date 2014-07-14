@@ -11,6 +11,7 @@ ENV PATH ./node_modules/.bin:$PATH
 # install required software
 RUN pacman -Syu --noconfirm --ignore filesystem
 RUN pacman -S --noconfirm nodejs
+RUN pacman -S --noconfirm make
 RUN pacman -S git --noconfirm
 
 RUN npm install coffee-script -g --save
