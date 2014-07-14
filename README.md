@@ -24,14 +24,14 @@ Quickstart:
 curl -XPUT localhost:9000/weather/santa-monica -d'70 degrees and sunny'
 curl localhost:9000/weather/santa-monica
 ```
-The result should read "70 degrees and sunny."
+The result should read "70 degrees and sunny."  
 (The docker container's virtual port 1337 should be exposed to the local port 9000 by preset)
 
 -----------------
 Basic Terminology
 -----------------
 
-- image: recipes prepared by others (e.g. base/arch, centos, ubuntu:12.04) 
+- image: recipes prepared by others (e.g. base/arch, centos, ubuntu:12.04)  
   https://github.com/dotcloud/docker/wiki/Public-docker-images
 
 - container: an instance of an image (e.g. a running server with CLI access)
@@ -40,9 +40,9 @@ Basic Terminology
 Cleaning Up
 -----------
 
-- containers: `make cleancontainers`
+- containers: `make cleancontainers`  
   will stop running containers, will remove all containers.
 
-- images: `make cleanimages`
+- images: `make cleanimages`  
   WARNING - because running containers have a dependency on their image, removing images
   necessitates stopping and removing containers as well.
