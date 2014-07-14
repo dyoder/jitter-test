@@ -14,7 +14,8 @@ Quickstart:
 3. `make buildrun cname=CONTAINER_NAME iname=IMAGE_NAME [nocache=true]`  
  `buildrun` should take a minute or two your first time (because lack of cache).  
  `nocache=true` (defaulted to false)  will re-download base/arch and rebuild image.  
- After you've got your container shell running, you should be in root / directory:  
+ After you've got your container shell running, you should be in the container's  
+ root / directory.  Run these commands in the container's shell:  
 4. `redis-server &`
 5. `cd jitter-test`
 6. `make app`
