@@ -19,4 +19,4 @@ cleanuntagged:
 
 app:
 	npm install && \
-	coffee server.coffee &
+	coffee server.coffee

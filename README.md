@@ -46,8 +46,3 @@ Cleaning Up
 - images: `make cleanimages`
   WARNING - because running containers have a dependency on their image, removing images
   necessitates stopping and removing containers as well.
-
-
-
-
-

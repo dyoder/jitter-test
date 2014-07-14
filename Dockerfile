@@ -12,7 +12,7 @@ ENV PATH ./node_modules/.bin:$PATH
 RUN pacman -Syu --noconfirm --ignore filesystem
 RUN pacman -S --noconfirm nodejs
 RUN pacman -S --noconfirm make
-RUN pacman -S git --noconfirm
+RUN pacman -S --noconfirm git
 
 RUN npm install coffee-script -g --save
 RUN pacman -S --noconfirm redis
