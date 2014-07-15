@@ -8,9 +8,9 @@ Quickstart:
 
 This will take a few minutes the first time you do it. You'll get output along the lines of: `Successfully built c0d40381300c`.
 
-4. `docker run -p 9000:1337  --name jitter -t jitter:latest`
+4. `docker run -p 49000:1337  --name jitter -t jitter:latest`
 
-This will map port `9000` to the container's `1337` port.
+This will map port `49000` to the container's `1337` port.
 
 5. Test it out:
 
