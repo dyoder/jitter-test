@@ -1,3 +1,0 @@
-#!/bin/bash
-
-curl -X $HTTP_METHOD -H "Authorization: Bearer $TOKEN""https://api.digitalocean.com/v2/$OBJECT"

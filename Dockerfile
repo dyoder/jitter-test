@@ -19,8 +19,10 @@ RUN npm install coffee-script -g --save
 RUN pacman -S --noconfirm redis
 
 # install test app
-ADD package.json /package.json
-ADD server.coffee /server.coffee
+ADD package.json /jitter/package.json
+ADD server.coffee /jitter/server.coffee
+
+WORKDIR /jitter
 RUN npm install
 CMD npm run start
 
