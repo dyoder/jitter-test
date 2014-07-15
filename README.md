@@ -1,15 +1,8 @@
-Docker Setup
-============
-
-Requirements:
-1. docker
-2. make (nix systems)
-
 -----------
 Quickstart:
 -----------
 
-1. `git clone https://github.com/peterlnguyen/jitter-test.git`
+1. `git clone https://github.com/dyoder/jitter-test.git`
 2. `cd jitter-test`
 3. `docker build -t jitter .`  
 
