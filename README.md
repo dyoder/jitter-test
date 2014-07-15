@@ -15,8 +15,8 @@ This will map port `9000` to the container's `1337` port.
 5. Test it out:
 
 ```
-curl -XPUT localhost:9000/weather/santa-monica -d'70 degrees and sunny'
-curl localhost:9000/weather/santa-monica
+curl -XPUT localhost:49000/weather/santa-monica -d'70 degrees and sunny'
+curl localhost:49000/weather/santa-monica
 ```
 
 The result should read `70 degrees and sunny`.
