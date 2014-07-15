@@ -32,18 +32,19 @@ The result should read `70 degrees and sunny`.
 Basic Terminology
 -----------------
 
-- image: recipes prepared by others (e.g. base/arch, centos, ubuntu:12.04)
-  https://github.com/dotcloud/docker/wiki/Public-docker-images
-
-- container: an instance of an image (e.g. a running server with CLI access)
 
 -----------
 Cleaning Up
 -----------
 
-- containers: `make cleancontainers`
-  will stop running containers, will remove all containers.
+To stop all running containers:
 
-- images: `make cleanimages`
-  WARNING - because running containers have a dependency on their image, removing images
-  necessitates stopping and removing containers as well.
+```
+docker stop `docker ps -a -q`
+```
+
+To remove all containers:
+
+```
+docker rm -f `docker ps -a -q`
+```
